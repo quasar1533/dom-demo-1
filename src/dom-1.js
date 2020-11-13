@@ -124,6 +124,14 @@ window.dom = {
   next(node) {
     return node.nextElementSibling;
   },
+  
+  // next(node) {
+  //   let result = node.nextSibling;
+  //   if (result && (result.nodeType === 1 || result.nodeType === 3)) {
+  //     return result;
+  //   }
+  // },   //test
+
   previous(node) {
     return node.previousElementSibling;
   },
