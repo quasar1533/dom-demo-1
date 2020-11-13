@@ -88,13 +88,13 @@ window.dom = {
             node.style[key] = styleName[key];
           }
         }
-      } else {
+      } else if (typeof styleName === 'string') {
         return node.style[styleName];
       }
     } else if (arguments.length === 3) {
       node.style[styleName] = styleValue;
     }
-  },
+  },  //注意考虑周全
   class: {
     add(node, className) {
       node.classList.add(className);
@@ -124,7 +124,7 @@ window.dom = {
   next(node) {
     return node.nextElementSibling;
   },
-  
+
   // next(node) {
   //   let result = node.nextSibling;
   //   if (result && (result.nodeType === 1 || result.nodeType === 3)) {
